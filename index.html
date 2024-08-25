@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="t"></script>
+    <title>Document</title>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+            font-weight: bolder;
+        }
+
+      a:hover,button:hover{
+            transition: .6s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="font-manrope">
+    <header class="">
+        <nav class="flex lg:justify-evenly justify-between lg:gap-28 lg:p-10 md:px-12 p-6">
+            <!-- logo -->
+ <h1 class="text-3xl font-extrabold">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="size-8 bg-[#abef5f] rounded-full w-9 h-9 p-1 inline">
+                    <path fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                        clip-rule="evenodd" />
+                </svg>
+                Rinterio
+            </h1>
+
+            <!-- nav-items -->
+            <ul class="hidden lg:inline">
+                <li class="flex gap-10 text-base">
+                    <a href="#home" class="text-[#737373] hover:text-black">Home</a>
+                    <a href="#about-us" class="text-[#737373] hover:text-black">About Us</a>
+                    <a href="#portfolio" class="text-[#737373] hover:text-black">Portfolio</a>
+                    <a href="#blogs" class="text-[#737373] hover:text-black">Blogs</a>
+                    <a href="#contact" class="text-[#737373] hover:text-black">Contact Us</a>
+                </li>
+            </ul>
+
+           
+            <!-- nav icons -->
+             <div class="flex gap-2 items-center">
+            <div class="sm:flex gap-2 justify-between hidden items-center md:float-right">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8  bg-[#ffff] rounded-full lg:h-9 lg:w-9 p-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 bg-[#ffff] rounded-full lg:h-9 lg:w-9 p-1">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                </svg>
+                <Button
+                class="flex bg-[#abef5f] rounded-3xl py-3 px-7 font-extrabold gap-2 justify-center align-middle transition-transform duration-200 hover:scale-105 hover:bg-[#a3e04d]">
+                Book Consult
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="size-8 bg-[#000000] text-white rounded-full w-7 h-7 p-1">
+                    <path fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </Button>
+            
+            
+            
+
+            </div>
+            <!-- menu  -->
+            <div class="lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </div> 
+            </div>
+        </nav>
+
+   
+        <!-- banner -->
+        <div class="flex flex-col gap-12 justify-center items-center" id="home">
+            <img class="w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/3 mx-auto" src="assets/banner.png" alt="">
+
+            <div class="grid gap-7">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-center lg:px-48 px-6">
+                    A barn house of this design has a striking appearance
+                </h1>
+
+                <p class="text-sm sm:text-base lg:text-lg text-center font-semibold lg:px-64 px-8">
+                    The barn house captivates with its blend of rustic charm and modern sophistication, featuring
+                    weathered wood,
+                    sleek metal accents, and large windows that flood the space with natural light.
+                </p>
+                <button
+                class="flex bg-[#abef5f80] rounded-3xl py-3 px-7 font-extrabold gap-2 justify-center items-center mx-auto hover:bg-[#000000] hover:text-[#abef5f] transition">
+                View Details
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="bg-[#abef5f] rounded-full w-7 h-6 p-1 text-black">
+                    <path fill-rule="evenodd"
+                        d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+            
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="bg-gray-100">
+        <!-- About Us -->
+        <section class="mt-24 flex flex-col lg:flex-row gap-4 justify-evenly py-20 px-8 lg:px-36" id="about-us">
+            <div class="flex flex-col items-center lg:items-start lg:w-max">
+                <img class="hidden lg:block object-none" src="assets/Vector.png" alt="">
+                <button class="flex gap-2 border bg-white rounded-3xl py-2 px-5 mt-3 lg:ml-24 hover:bg-[#ABEF5F33] ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                    About Us
+                </button>
+                <h2 class="text-4xl font-extrabold p-2 m-3 w-full lg:w-2/4 lg:ml-24 text-center lg:text-left">
+                    We Create Thoughtful, Livable Spaces
+                </h2>
+                <p class="pb-3 w-full lg:w-3/4 px-2 lg:ml-24 text-center lg:text-left">
+                    Our designs blend rustic charm with modern elegance, featuring weathered wood, sleek metal accents, and timeless style.
+                </p>
+                <!-- cards -->
+                <div class="flex flex-col md:flex-row lg:flex-col gap-5 mt-2">
+                    <!-- card-1 -->
+                    <div
+                        class="flex gap-4 justify-center lg:justify-evenly items-center bg-white rounded-xl p-5 px-10 lg:min-w-max md:w-1/2 lg:ml-24 lg:pr-12">
+                        <img class="w-20" src="assets/commercial.png" alt="">
+                        <div>
+                            <h2>Commercial</h2>
+                            <p class="font-normal">Bringing sophistication and functionality to commercial spaces.</p>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div
+                        class="flex gap-4 justify-center lg:justify-evenly items-center bg-white rounded-xl p-5 px-10 lg:min-w-max md:w-1/2 lg:ml-24 lg:pr-20">
+                        <img class="w-20" src="assets/residential.png" alt="">
+                        <div>
+                            <h2>Residential</h2>
+                            <p class="font-normal">Crafting homes with a perfect balance of style and comfort.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="mx-1 my-10 lg:h-fit lg:mx-10 h-96 md:w-full sm:object-center sm:object-cover rounded-2xl"
+                src="assets/Rectangle.png" alt="">
+        </section>
+        
+
+        <!-- box -->
+        <section
+            class="grid rounded-3xl bg-white py-12 w-3/4 mx-auto mb-28 mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-20 gap-y-10">
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-10 text-center mx-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                </svg>
+                <h1 class="text-center text-3xl m-2">10K+</h1>
+                <p class="text-center font-normal ">Happy Client Review</p>
+            </div>
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" stroke-width="1.5"
+                    class="size-10 text-center mx-auto">
+                    <path
+                        d="M64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16l80 0 0-64c0-26.5 21.5-48 48-48s48 21.5 48 48l0 64 80 0c8.8 0 16-7.2 16-16l0-384c0-8.8-7.2-16-16-16L64 48zM0 64C0 28.7 28.7 0 64 0L320 0c35.3 0 64 28.7 64 64l0 384c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm88 40c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zM232 88l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48zm144-16l48 0c8.8 0 16 7.2 16 16l0 48c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-48c0-8.8 7.2-16 16-16z" />
+                </svg>
+                <h1 class="text-center text-3xl m-2">50+</h1>
+                <p class="text-center font-normal ">Work Departments</p>
+            </div>
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                    class="size-10 text-center mx-auto text-gray-200">
+                    <path
+                        d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                </svg>
+                <h1 class="text-center text-3xl m-2">30K+</h1>
+                <p class="text-center font-normal">Our Happy Client</p>
+            </div>
+            <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-10 text-center mx-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                </svg>
+
+                <h1 class="text-center text-3xl m-2">307+</h1>
+                <p class="text-center font-normal ">Staff Members</p>
+            </div>
+        </section>
+
+   <!-- Our Work Process -->
+   <section class="pb-24 md:px-20 px-10 lg:px-0">
+    <button class="flex gap-2 border bg-white rounded-3xl py-2 px-5 mt-3 mx-auto hover:bg-[#ABEF5F33] transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+        How We Work
+    </button>
+    <h2 class="text-4xl font-extrabold p-2 m-3 text-center">Our Work Process</h2>
+    <p class="mx-auto lg:w-2/5 text-center pb-10 pt-2">
+        Discover how our unique blend of rustic charm and modern sophistication brings your visions to life.
+    </p>
+
+    <!-- cards container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 place-items-center w-max mx-auto">
+        <!-- card-1 -->
+        <div class="py-10 px-6 bg-[#E7C1D3] rounded-xl w-72 lg:hover:-translate-y-20 lg:hover:translate-x-0 md:hover:-translate-y-5 md:hover:-translate-x-5 hover:scale-110 transition-transform ease-in-out duration-500">
+            <img src="assets/concept.png" alt="">
+            <h4 class="text-2xl font-extrabold pt-1">Concept</h4>
+            <p class="font-normal p-2">We start with a deep understanding of your needs and vision.</p>
+        </div>
+        <!-- card-2 -->
+        <div class="py-10 px-6 bg-[#EFDA6E] rounded-xl w-72 lg:hover:translate-y-20 lg:hover:translate-x-0 md:hover:-translate-y-5 md:hover:translate-x-5 hover:scale-110 transition-transform ease-in-out duration-500">
+            <img src="assets/flow-chart.png" alt="">
+            <h4 class="text-2xl font-extrabold pt-1">Design Process</h4>
+            <p class="font-normal p-2">Our designs seamlessly blend form and function to create beautiful spaces.</p>
+        </div>
+        <!-- card-3 -->
+        <div class="py-10 px-6 bg-[#A4DAC3] rounded-xl w-72 lg:hover:-translate-y-20 lg:hover:translate-x-0 md:hover:translate-y-5 md:hover:-translate-x-5 hover:scale-110 transition-transform ease-in-out duration-500">
+            <img src="assets/vision.png" alt="">
+            <h4 class="text-2xl font-extrabold pt-1">Supervision</h4>
+            <p class="font-normal p-2">We ensure every detail is executed to perfection, from start to finish.</p>
+        </div>
+        <!-- card-4 -->
+        <div class="py-10 px-6 bg-[#77AAEA] rounded-xl w-72 lg:hover:translate-y-20 lg:hover:translate-x-0 md:hover:translate-y-5 md:hover:translate-x-5 hover:scale-110 transition-transform ease-in-out duration-500">
+            <img src="assets/budget-planning.png" alt="">
+            <h4 class="text-2xl font-extrabold pt-1">Budget Planning</h4>
+            <p class="font-normal p-2">We plan meticulously to deliver quality within your budget.</p>
+        </div>
+    </div>
+</section>
+        
+
+     <!-- Our Latest Portfolio -->
+<section class="lg:bg-white pt-10 px-20 lg:pb-24" id="portfolio">
+    <button class="flex gap-2 border bg-[#ABEF5F33] rounded-3xl py-2 px-5 mt-3 mx-auto hover:bg-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+        Explore Our Latest Works
+    </button>
+    <h2 class="text-4xl font-extrabold p-2 m-3 text-center">Our Latest Portfolio</h2>
+    <p class="mx-auto lg:w-2/5 text-center pb-0 pt-2">
+        Discover the charm of our latest projects, where rustic meets modern in perfect harmony.
+    </p>
+    <!-- portfolio container -->
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-12 lg:grid-cols-12 p-2 md:p-10 pt-5 max-w-max mx-auto">
+        <!-- box-1 -->
+        <div class="py-4 px-5 rounded-3xl flex flex-col md:flex-row gap-5 bg-white border col-span-1 md:col-span-12 lg:col-span-7 lg:col-start-2">
+            <img src="assets/img1.png" alt="" class="rounded-2xl w-full md:w-auto lg:max-w-64">
+            <div class="p-4 text-left lg:w-full w-fit">
+                <h3 class="text-xl font-semibold max-w-max">Commercial Excellence</h3>
+                <p class="text-gray-600 mt-2 mb-4 max-w-max">Experience the fusion of tradition and innovation in our commercial spaces.</p>
+                <a href="#" class="inline text-black hover:underline">View Details
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                        class="size-8 bg-[#abef5f] rounded-full w-8 h-8 p-1 ml-2 inline text-black">
+                        <path fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    
+        <!-- box-2 -->
+        <div class="col-span-1 md:col-span-6 lg:col-span-3">
+            <img src="assets/img2.png" alt="Commercial" class="w-full h-64 bg-white py-4 px-5 rounded-3xl border">
+        </div>
+    
+        <!-- box-3 -->
+        <div class="col-span-1 md:col-span-6 lg:col-span-3 lg:col-start-2">
+            <img src="assets/img3.png" alt="Commercial" class="w-full h-64 bg-white py-4 px-5 rounded-3xl border">
+        </div>
+    
+        <!-- box-4 -->
+        <div class="py-4 px-5 rounded-3xl flex flex-col md:flex-row gap-5 bg-white border col-span-1 md:col-span-12 lg:col-span-5 ">
+            <img src="assets/img4.png" alt="" class="rounded-2xl md:w-auto lg:max-w-64">
+            <div class="p-4 text-left w-full md:w-1/2">
+                <h3 class="text-xl font-semibold">Residential Elegance</h3>
+                <p class="text-gray-600 mt-2 mb-4">Our residential designs blend comfort with modern aesthetics.</p>
+                <a href="#" class="inline text-black hover:underline">View Details
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                        class="size-8 bg-[#abef5f] rounded-full w-8 h-8 p-1 ml-2 inline text-black">
+                        <path fill-rule="evenodd"
+                            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    
+        <!-- box-5 -->
+        <div class="col-span-1 md:col-span-6  lg:col-span-2">
+            <img src="assets/img5.png" alt="Residential" class="w-full h-64 bg-white py-4 px-5 rounded-3xl border">
+        </div>
+    
+        <!-- box-6 -->
+        <div class="col-span-1 md:col-span-6 lg:hidden">
+            <img src="assets/img3.png" alt="Residential" class="w-full h-64 bg-white py-4 px-5 rounded-3xl border">
+        </div>
+       </div>
+    
+      </section>
+
+
+      <!-- News and Articles -->
+         <section class="pt-16 pb-28 px-16 md:px-10 lg:px-0" id="blogs">
+    <button class="flex gap-2 border bg-[#ABEF5F33] hover:bg-white rounded-3xl py-2 px-5 mt-3 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 " aria-label="Arrow Icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+        </svg>
+        Rinterio News
+    </button>
+    <h2 class="text-4xl font-extrabold p-2 m-3 text-center">Read Our Articles and News</h2>
+    <p class="mx-auto lg:w-2/5 text-center pb-10 pt-2">The barn house captivates with its blend of rustic charm
+        and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+
+    <!-- cards container -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:w-3/4 gap-6 mx-auto md:px-10 md:max-w-max">
+  <!-- card-1 -->
+  <div class="pt-6 px-6 pb-3 md:pb-6 rounded-3xl gap-5 bg-white border flex flex-col md:flex-row lg:flex-col mx-auto justify-center">
+    <img src="assets/article1.png" alt="Furniture article image" class="rounded-2xl w-full sm:w-full md:w-1/2 lg:w-full hover:scale-105 transition-transform">
+    <div class="p-4 flex flex-col">
+        <!-- Date -->
+        <div class="flex gap-6 p-2">
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="Calendar Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                </svg>
+                <p class="font-normal text-sm">July 23, 2024</p>
+            </div>
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="User Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <p class="font-normal text-sm">By Admin</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h3 class="text-xl font-extrabold w-full">How to Choose the Right Furniture for Your Home</h3>
+            <p class="text-gray-600 mt-2 mb-4 w-full">Discover tips and tricks to select furniture that perfectly complements your home's style and functionality.</p>
+            <a href="#" class="inline text-black hover:underline">Read More
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-8 bg-[#abef5f] rounded-full w-8 h-8 p-1  ml-1 inline text-black">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
+ </div>
+
+
+   <!-- card-2 -->
+<div class="pt-6 px-6 pb-3 md:pb-6 rounded-3xl gap-5 bg-white border flex flex-col md:flex-row lg:flex-col mx-auto justify-center">
+    <img src="assets/article2.png" alt="Furniture article image" class="rounded-2xl w-full sm:w-full md:w-1/2 lg:w-full hover:scale-105 transition-transform">
+    <div class="p-4 flex flex-col">
+        <!-- Date -->
+        <div class="flex gap-6 p-2">
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="Calendar Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                </svg>
+                <p class="font-normal text-sm">July 23, 2024</p>
+            </div>
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="User Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <p class="font-normal text-sm">By Admin</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h3 class="text-xl font-extrabold w-full">Maximizing Your Home's Potential: Tips and Tricks</h3>
+            <p class="text-gray-600 mt-2 mb-4 w-full">Learn how to make the most of your living space with practical tips and creative ideas.</p>
+            <a href="#" class="inline text-black hover:underline">Read More
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-8 bg-[#abef5f] rounded-full w-8 h-8 p-1  ml-1 inline text-black">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+   <!-- card-3 -->
+<div class="pt-6 px-6 pb-3 md:pb-6 rounded-3xl gap-5 bg-white border flex flex-col md:flex-row lg:flex-col mx-auto justify-center">
+    <img src="assets/article3.png" alt="Furniture article image" class="rounded-2xl w-full sm:w-full md:w-1/2 lg:w-full hover:scale-105 transition-transform">
+    <div class="p-4 flex flex-col">
+         <!-- Date -->
+         <div class="flex gap-6 p-2">
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="Calendar Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                </svg>
+                <p class="font-normal text-sm">July 23, 2024</p>
+            </div>
+            <div class="flex gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" aria-label="User Icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <p class="font-normal text-sm">By Admin</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <h3 class="text-xl font-extrabold w-full">Step-by-Step Guide to Creating Beautiful Interiors</h3>
+            <p class="text-gray-600 mt-2 mb-4 w-full">Explore our comprehensive guide to designing stunning interiors that blend rustic charm with modern elegance.</p>
+            <a href="#" class="inline text-black hover:underline">Read More
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-8 bg-[#abef5f] rounded-full w-8 h-8 p-1 ml-1 inline text-black">
+                    <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+         </section>
+
+
+        <!-- Contact   -->
+        <section class="bg-[url('/assets/bg.jpg')] pt-10 pb-20 bg-cover bg-center md:px-10 lg:px-0 px-5 border-8 border-white" id="contact">
+            <button class="flex gap-2 border bg-[#ABEF5F33] rounded-3xl py-2 px-5 mt-3 mx-auto hover:bg-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                Let’s Connect
+            </button>
+            <h2 class="text-4xl font-extrabold p-2 m-3 text-center">Let’s Discuss Your Next Project</h2>
+            <p class="mx-auto lg:w-2/5 w-full text-center pb-10 pt-2">We are excited to bring your vision to life with our blend of rustic charm and modern sophistication. Let's create something amazing together.</p>
+            <form action="" class="grid grid-cols-1 md:grid-cols-2 w-3/4 gap-7 mx-auto px-4 lg:px-40">
+                <input type="text" class="bg-white outline-none border-none py-4 px-5 rounded-3xl font-medium text-[#A0A0A0]" placeholder="First Name*">
+                <input type="text" class="bg-white outline-none border-none py-4 px-5 rounded-3xl font-medium text-[#A0A0A0]" placeholder="Last Name*">
+                <input type="text" class="bg-white outline-none border-none py-4 px-5 rounded-3xl font-medium text-[#A0A0A0]" placeholder="Phone Number*">
+                <input type="text" class="bg-white outline-none border-none py-4 px-5 rounded-3xl font-medium text-[#A0A0A0]" placeholder="Email Address*">
+                <textarea name="message" id="message" class="bg-white outline-none border-none p-5 min-h-60 max-h-80 rounded-3xl font-medium text-[#A0A0A0] col-span-1 md:col-span-2" placeholder="Write your message here"></textarea>
+                <button type="submit" class="flex bg-[#abef5f] rounded-3xl py-3 px-7 font-extrabold gap-2 justify-center items-center col-span-1 md:col-span-2 transition-transform duration-200 hover:scale-105 hover:bg-[#a3e04d]">
+                    Send Message
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-7 h-7 p-1 bg-[#000000] text-white rounded-full">
+                        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer class="bg-black md:px-16 md:py-32 p-14 justify-center flex-col flex gap-8">
+        <!-- logo -->
+        <h1 class="text-3xl font-extrabold text-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="size-8 bg-[#abef5f] rounded-full w-9 h-9 p-1 inline text-black">
+                <path fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                    clip-rule="evenodd" />
+            </svg>
+            Rinterio
+        </h1>
+        <p class="text-[#737373;] text-center mx-auto lg:w-1/2">Rinterio specializes in creating beautiful homes that blend rustic charm with modern sophistication. Our designs feature weathered wood and sleek metal accents to create captivating living spaces.</p>
+        <ul class="mx-auto pb-5">
+            <li class="flex flex-col md:flex-row gap-x-20 gap-y-5 text-center">
+                <a href="#home" class="text-[#ffffff] hover:text-[#737373]">Home</a>
+                <a href="#about-us" class="text-[#ffffff] hover:text-[#737373]">About Us</a>
+                <a href="#portfolio" class="text-[#ffffff] hover:text-[#737373]">Portfolio</a>
+                <a href="#blogs" class="text-[#ffffff] hover:text-[#737373]">Blogs</a>
+                <a href="#contact" class="text-[#ffffff] hover:text-[#737373]">Contact Us</a>
+            </li>
+        </ul>
+        <button class="flex bg-[#abef5f] rounded-3xl py-3 px-7 font-extrabold gap-2 justify-center align-middle mx-auto transition-transform duration-200 hover:scale-105 hover:bg-[#a3e04d]">
+            Book Consult
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="size-8 bg-[#000000] text-white rounded-full w-7 h-7 p-1">
+                <path fill-rule="evenodd"
+                    d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </footer>
+    
+</body>
